@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Crystal Game</title>
+    <!--Linking Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--Local stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+  </head>
+
+  <body>
+    <!--Game area setup-->
+    <div class="row space">
+        <div class="col-md-6">
+            <h1>Crystal Collector</h1>
+        </div>
+    </div>
+
+    <div class="row space">
+        <div class="col-md-6">
+            <section class="instructions">
+                <h2>Instructions</h2>
+                <p>You have a random target number at the start of the game. There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <p>You win the game by matching your total score to the random number. You lose the game if your total sore goes above the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it. Each time when the game starts, the game will change the value of each crystal.</p>
+            </section>
+        </div>
+    </div>
+
+    <div class="row space">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-8">
+                    <section class="target">
+                        <div>Target number: <span id="random-number"></span></div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <section class="game-status">
+                        <div id="status"></div>
+                        <div>Wins: <span id="wins"></span></div>
+                        <div>Losses: <span id="losses"></span></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="row space">
+        <div class="col-md-6">
+            <div class="crystal-area">
+                <li><div id="crystal1"></div></li>
+                <li><div id="crystal2"></div></li>
+                <li><div id="crystal3"></div></li>
+                <li><div id="crystal4"></div></li>
+            </div>
+        </div>
+    </ul>
+
+    <div class="row space">
+        <div class="col-md-6">
+            <section class="score-area">
+                <div>Your score is: <span id="score"></span></div>
+            </section>
+        </div>
+    </div>
+
+    <!--jQuery link and link to external javascript-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+  </body>
+</html>

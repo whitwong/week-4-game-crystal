@@ -1,0 +1,95 @@
+body {
+	font-family: 'Lobster Two', cursive;
+	background-image: url("../images/topography.png");
+}
+.space {
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+h1, h2 {
+	margin: 0px;
+	text-align: center;
+}
+h1, .instructions, .target {
+	padding: 20px;
+}
+h1 {
+	font-size: 5em;
+	background: rgba(161, 91, 235, 1);
+	color: white;
+	margin-top: 5px;
+}
+h2 {
+	font-size: 3em;
+}
+.instructions {
+	background: rgba(70, 211, 165, 1);
+	color: white;
+}
+.target {
+	font-size: 2em;
+	background: orange;
+	text-align: center;
+	height: 100px;
+}
+.col-md-8 {
+	padding-right: 0px;
+}
+#random-number {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.col-md-4 {
+	padding-left: 0px;
+}
+.game-status {
+	font-size: 1.35em;
+	background: #D33166;
+	height: 100px;
+	padding: 10px;
+	text-align: center;
+}
+.crystal-image {
+	height: 100px;
+	width: 100px;
+	margin: 0px 5px;
+}
+.crystal-image:hover {
+	border: 10px solid #98A6F7;
+}
+.crystal-area {
+	text-align: center;
+	padding: 10px;
+	background: #E8DF31;
+}
+ul {
+	padding: 0px;
+	margin: 0px;
+}
+li {
+	display: inline-block;
+}
+.score-area {
+	font-size: 2em;
+	background: #5F4BD1;
+	color: white;
+	text-align: center;
+	padding:10px;
+	height: 80px;
+}
+#score {
+	font-weight: bold;
+	font-size: 1.35em;
+	color: #29F7B1;
+}
+
+/*Media queries*/
+@media screen and (max-width: 990px) {
+	.col-md-8{
+		padding-right: 15px;
+	}
+	.col-md-4{
+		padding-left: 15px;
+		margin-top: 5px;
+	}
+}
