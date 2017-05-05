@@ -57,34 +57,30 @@ function reset() {
 	$("#crystal4").html(crystalImage4);
 
 	/*Create on-click events to take value of image selections and add together*/
-	$(document).ready(function() {
-		$(".crystal-image").on("click", function() {
-			//Empty status message on first click of new game
-			$("#status").html("");
+	$(".crystal-image").click(function() {
+		//Empty status message on first click of new game
+		$("#status").html("");
 
-			//Store the value of "value" and parse back into an integer
-			crystalValue = ($(this).attr("value"));
-	    	crystalValue = parseInt(crystalValue);
+		//Store the value of "value" and parse back into an integer
+		crystalValue = ($(this).attr("value"));
+    	crystalValue = parseInt(crystalValue);
 
-	    	//Increment counter to keep track of score
-	    	counter += crystalValue;
-	    	$("#score").html(counter);
+    	//Increment counter to keep track of score
+    	counter += crystalValue;
+    	$("#score").html(counter);
 
-	    	//Conditions for winning and losing the game
-	    	if(counter === randNum){
-	    		$("#status").html("You win!");
-	    		win++;
-	    		$("#wins").html(win);
-	    		reset();
-	    		return;
-	    	}
-	    	else if(counter > randNum){
-	    		$("#status").html("You lost...");
-	    		lose++;
-	    		$("#losses").html(lose); 
-	    		reset();
-	    		return;   		
-	    	}
-		});
+    	//Conditions for winning and losing the game
+    	if(counter === randNum){
+    		$("#status").html("You win!");
+    		win++;
+    		$("#wins").html(win);
+    		reset();
+    	}
+    	else if(counter > randNum){
+    		$("#status").html("You lost...");
+    		lose++;
+    		$("#losses").html(lose); 
+    		reset();  		
+    	}
 	});
 }
